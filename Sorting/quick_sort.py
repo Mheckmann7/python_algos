@@ -18,3 +18,4 @@ def quick_sort(lst):
     # use recursion to call the algorithm on each of the sublists 
 
 print(quick_sort([23,34,56,76,45,23,24,20])) 
+# often out performs with n log n complexity 
