@@ -15,6 +15,19 @@ def binary_search(arr, low, high, num):
 arr = [2,3,4,10,40]
 # print(binary_search(arr, 0, len(arr) - 1, 10))
 
+
+def search(arr, num):
+    left = 0
+    right = arr.length - 1
+    while left <= right:
+        mid = (left + right) / 2
+        if arr[mid] == num:
+            return mid
+        elif num < arr[mid]:
+            right = mid - 1
+        else:
+            left = mid + 1 
+    return -1 
 #Given a sorted array of integers, return the low and high index of the given key. 
 # You must return -1 if the indexes are not found.
 def find_low_index(arr, key):

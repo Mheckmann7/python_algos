@@ -8,20 +8,20 @@ def merge_sort(list):
          #recursion 
         merge_sort(left_list)
         merge_sort(right_list)
-        print(left_list, right_list)
+        print('L', left_list, 'R', right_list)
          #merge
         i = 0 # left most element in left list
         j = 0 # left most element in right list
         k = 0 # merged list index
         while i < len(left_list) and j < len(right_list):
             if left_list[i] < right_list[j]: # left list is smaller than right list
-                list[i] = left_list[i] #save the value of the left list inside the merged list
+                list[k] = left_list[i] #save the value of the left list inside the merged list
                 i += 1 # increase i
             else: # right list is smaller than the left list at the current index or they are equal
                 list[k] = right_list[j]
                 j += 1
             k += 1 #increase k in every while loop 
-        # check if any elements were left over 
+        # check if any elements were left over
         while i < len(left_list):
             list[k] = left_list[i]
             i += 1
