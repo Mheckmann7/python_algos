@@ -18,7 +18,7 @@ arr = [2,3,4,10,40]
 
 def search(arr, num):
     left = 0
-    right = arr.length - 1
+    right = len(arr) - 1
     while left <= right:
         mid = (left + right) / 2
         if arr[mid] == num:
